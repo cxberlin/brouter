@@ -21,7 +21,6 @@ ENV JAVA_OPTS '-Xmx128M -Xms128M -Xmn8M -XX:+PrintCommandLineFlags'
 ENV MAX_THREADS 1
 
 WORKDIR /data
-#CMD java ${JAVA_OPTS} -DmaxRunningTime=${REQUEST_TIMEOUT} -cp /usr/src/app/brouter/brouter-server/target/brouter-server-1.2-jar-with-dependencies.jar btools.server.RouteServer segments profiles ../customprofiles 17777 ${MAX_THREADS}
 
 ENV SEGMENTSPATH /data/segments
 ENV PROFILESPATH /data/profiles
