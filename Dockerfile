@@ -17,8 +17,9 @@ VOLUME /data/customprofiles
 
 # REQUEST_TIMEOUT in seconds, set to 0 to disable it
 ENV REQUEST_TIMEOUT 300
-ENV JAVA_OPTS '-Xmx512M -Xms512M -Xmn16M -XX:+PrintCommandLineFlags'
 ENV MAX_THREADS 4
+
+RUN sed -i 's/-Xmx128M -Xms128M -Xmn8M/-Xmx512M -Xms512M -Xmn16M/' /usr/src/app/brouter/misc/scripts/standalone/server.sh
 
 WORKDIR /data
 
